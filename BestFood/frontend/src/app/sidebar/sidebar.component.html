@@ -1,0 +1,91 @@
+<div [ngClass]="{'sidebar':true,'active':check}" style="z-index: 1000;">
+    <div class="log_content">
+        <div class="logo">
+            <i class='bx bx-qr-scan' style="color: white;"></i>
+            <div class="logo_name">BESTFOOD</div>
+        </div>
+        <i class='bx bx-menu-alt-left' id="btn" (click)="toggle()"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a routerLink="/profil">
+                <i class='bx bx-user' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Profil</span>
+            </a>
+            <span class="tool">Profil</span>
+        </li>
+
+
+
+        <li>
+            <a routerLink="/updateprofil">
+                <i class='bx bx-server' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Update profil</span>
+            </a>
+            <span class="tool">update</span>
+        </li>
+
+
+        <li>
+            <a routerLink="/Menu/allProductes">
+                <i class='bx bx-food-menu' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Menu</span>
+            </a>
+            <span class="tool">Menu</span>
+        </li>
+        <li>
+            <a routerLink="/Restaurent">
+                <i class='bx bx-restaurant' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Restaurent</span>
+            </a>
+            <span class="tool">Restaurent</span>
+        </li>
+        <li>
+            <a routerLink="/contact">
+                <i class='bx bxs-chat' style="color: rgb(0, 0, 0);"></i>
+
+                <span class="links_name">Contact</span>
+            </a>
+            <span class="tool">Contact</span>
+        </li>
+        <li>
+            <a routerLink="/basket">
+                <i class='bx bxs-cart' style="color: rgb(0, 0, 0);"></i>
+
+                <span class="links_name">Basket</span>
+            </a>
+            <span class="tool">Basket</span>
+        </li>
+        <!-- <li>
+            <a routerLink="/basket"><i class='bx bxs-cart' style="color: rgb(0, 0, 0);"></i> <span style="color: black;">Basket</span> 
+                  <span class="badge badge-light"
+                    style="background-color: red;color:white;padding:5px;"></span>
+                
+            </a>
+        </li> -->
+
+        <li>
+            <a routerLink="/historique">
+
+                <i class='bx bx-history' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Historique</span>
+            </a>
+            <span class="tool">Historique</span>
+        </li>
+    </ul>
+    <div class="profile_content" >
+        <div class="profile">
+            <div class="profile_details">
+                <div class="name_job">
+                    <div class="name">{{user.user.lastName}} {{user.user.firstName}}</div>
+                    <div class="job">{{role}}</div>
+                </div>
+            </div>
+            <a (click)="logout()"><i class='bx bxs-log-out' id="log_out" ></i></a>
+        </div>
+    </div>
+</div>
+<div>
+
+    <router-outlet></router-outlet>
+</div>

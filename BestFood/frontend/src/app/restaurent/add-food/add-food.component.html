@@ -1,0 +1,43 @@
+<app-nav-rest></app-nav-rest>
+<div class="container" style="margin-top:50px">
+    <h1 style="text-align:center">Add<span style="color:rgb(255, 94, 0);">Food</span></h1><br>
+    <div class="box">
+        <form #f="ngForm">
+            <div class="{{alert}}" [hidden]=!message>
+                {{message}}
+            </div>
+            <p>Na<span style="color: rgb(247, 97, 10);">me:</span> </p>
+            <div class="form-group">
+                <input type="text" name="lastName" id="name" class="form-control" placeholder="Food name"
+                    [(ngModel)]="food.name" required>
+            </div>
+            <p>Pri<span style="color: rgb(247, 97, 10);">ce:</span></p>
+            <div class="form-group">
+                <input type="text" name="firsName" id="price" class="form-control" placeholder="Food price" value=""
+                    [(ngModel)]="food.price" required>
+            </div>
+            <p>img<span style="color: rgb(247, 97, 10);">:</span></p>
+            <div class="form-group">
+                <input type="text" name="phone" id="name" class="form-control" placeholder="Food Image" value=""
+                    [(ngModel)]="food.img" required>
+            </div>
+            <p>Cate<span style="color: rgb(247, 97, 10);">gory:</span> </p>
+            <div class="form-group">
+                <select name="category" [(ngModel)]="food.category" class="form-select"
+                    aria-label="Default select example" required>
+                    <option selected>Choose a food category</option>
+                    <option value="diet">diet</option>
+                    <option value="desert">desert</option>
+                    <option value="fast">fast food</option>
+                    <option value="soda">soda</option>
+                </select>
+
+            </div>
+
+            <div>
+                <input type="submit" value="Add Food" class="btn btn-buy4" (click)="addFood(food)" >
+
+            </div>
+        </form>
+    </div>
+</div>

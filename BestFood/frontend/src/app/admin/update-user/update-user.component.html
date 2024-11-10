@@ -1,0 +1,41 @@
+<app-side-bar-admin></app-side-bar-admin>
+<div class="container">
+
+    <div class="bloc">
+        <h1><span style="color: rgb(247, 97, 10);">U</span>pdate <span style="color: rgb(247, 97, 10);">P</span>rofil
+        </h1>
+        <form #f="ngForm">
+            <div class="{{alert}}" [hidden]=!message>
+                {{message}}
+            </div>
+            <p>last na<span style="color: rgb(247, 97, 10);">me:</span> </p>
+            <div class="form-group">
+                <input type="text" name="lastName" id="name" class="form-control" placeholder="last Name" [(ngModel)]="form.lastName" ngModel required>
+            </div>
+            <p>first na<span style="color: rgb(247, 97, 10);">me:</span></p>
+            <div class="form-group">
+                <input type="text" name="firsName" id="name" class="form-control" placeholder="first Name" value="" [(ngModel)]="form.firstName" required>
+            </div>
+            <p>number pho<span style="color: rgb(247, 97, 10);">ne:</span></p>
+            <div class="form-group">
+                <input type="text" name="phone" id="name" class="form-control" placeholder="number phone" value="" [(ngModel)]="form.phone" required>
+            </div>
+            <p>Ema<span style="color: rgb(247, 97, 10);">il:</span> </p>
+            <div class="form-group">
+                <input type="email" name="email" id="name" class="form-control" placeholder="Email" value="" [(ngModel)]="form.email" required>
+            </div>
+            <p>Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
+            <div class="form-group">
+                <input type="password" name="cpassword" id="name1" class="form-control" placeholder="password" value="" [(ngModel)]="forme.cpassword" required>
+            </div>
+            <p>New Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
+            <div class="form-group">
+                <input type="password" name="password" id="name" class="form-control" placeholder="New password" value="" [(ngModel)]="form.password" required>
+            </div>
+            <div>
+                <input type="submit" value="UPDATE" class="btn btn-buy4" (click)="update(form)" [disabled]="!f.valid">
+            </div>
+        </form>
+        <router-outlet></router-outlet>
+
+    </div>

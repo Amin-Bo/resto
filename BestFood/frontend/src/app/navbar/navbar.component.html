@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light nav sh ">
+    <!-- <a class="navbar-brand" href="" id="navc" style="font-size:22px;"><img  width="50" height="50" class="d-inline-block align-top" srcset=""><span style="color: black;"></a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ">
+            <!-- <li class="nav-item active">
+          <a class="nav-link" href="../php/home.php" id="navc">HOME <span class="sr-only">(current)</span></a>
+        </li> -->
+            <li class="nav-item">
+                <a class="nav-link" id="navc" routerLink="/Menu/allProductes"><i class='bx bx-food-menu'></i> MENU</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="navc" routerLink="/Restaurent"><i class='bx bx-restaurant'></i> Restaurent</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contact" id="navc"><i class='bx bxs-chat'></i> Contact</a>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i> <span
+                    style="color: white;">{{user.firstName}} {{user.lastName}}</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/profil">Profil</a>
+                    <a class="dropdown-item" routerLink="/basket">Basket</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" (click)="logout()">Déconnexion</a>
+                </div>
+            </li>
+
+        </ul>
+
+        <ul class="nav mls-auto">
+
+            <li class="nav-item">
+                <a class="btn btn-light" routerLink="/basket"><i class='bx bxs-cart'></i>Basket
+                    <span class="badge badge-light" style="background-color: red;color:white;padding:5px;">{{n}}</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link scroll nav2" href="#" id="navc"><i class="fa fa-phone" id="navc"></i>
+                    +216 77512513</a>
+            </li>
+
+
+
+
+
+
+        </ul>
+
+    </div>
+</nav>

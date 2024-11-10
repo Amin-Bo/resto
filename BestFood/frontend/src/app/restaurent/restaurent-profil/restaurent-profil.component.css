@@ -1,0 +1,66 @@
+.bloc {
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.123);
+    width: 60vw;
+    padding: 2vw;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+.cover{
+    border-radius: 15px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:130px;
+    box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+  }
+p {
+    font-size: 20px;
+}
+
+.p {
+    display: block;
+    text-align: -webkit-center;
+    font-size: 50px;
+}
+.btn-buy4 {
+    background-color: rgb(255, 94, 0);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-buy4:hover {
+    color: rgb(255, 94, 0);
+    background-color: white;
+    
+}
+.logo{
+    width:150px;
+    height:auto;
+    border-radius: 50%;
+    border:3px solid rgb(255, 255, 255);
+    
+    box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+}
+.cen {
+    display: block;
+    text-align: -webkit-center;
+  }
+  .center{
+    margin: auto;
+    width: 100%;
+
+    padding-left:auto;
+    padding-right: auto;
+    display: block;
+    text-align: -webkit-center;
+    
+  
+  }

@@ -1,0 +1,46 @@
+<app-nav-rest></app-nav-rest>
+<div class="container"  style="margin-top:20px">
+    <div class="cover" style="background-image:url({{resto.cover}})">
+        <div class="row">
+            <div class="col center">
+
+
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-top:-100px">
+        <div class="row" style="margin:30px">
+            <div class="col-2 center">
+                <img [src]="resto.logo" alt="" class="logo">
+            </div>
+
+        </div>
+        <div class="row center">
+            <h1>{{resto.name}}</h1>
+        </div>
+    </div>
+    <div class="bloc">
+
+
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="UPDATE" class="btn btn-buy4" routerLink="/UpdateProfilRestaurent">
+            </div>
+        </div>
+        <div class="row" >
+
+            <div class="col">
+                <h5 style="color: rgb(0, 0, 0);">Loca<span style="color: rgb(247, 97, 10);">tion:</span>{{resto.position}}</h5>
+                <h5 style="color: rgb(0, 0, 0);">Ema<span style="color: rgb(247, 97, 10);">il:</span>{{resto.email}}</h5>
+                <h5 style="color: rgb(0, 0, 0);">Descr<span style="color: rgb(247, 97, 10);">iption:</span>{{resto.description}}</h5>
+                <h5 style="color: rgb(0, 0, 0);">Pho<span style="color: rgb(247, 97, 10);">ne:</span>{{resto.phone}}</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

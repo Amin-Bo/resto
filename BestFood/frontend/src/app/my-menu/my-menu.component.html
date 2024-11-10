@@ -1,0 +1,39 @@
+<app-nav-rest></app-nav-rest>
+
+<div class="container">
+    <br>
+    <h1 style="text-align:center">MY <span style="color:rgb(255, 94, 0);">BASKET</span></h1><br>
+
+    <div class="row">
+
+        <table class="table table-light table-condensed">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">edit</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let food of resto; index as i;">
+                    <td><img [src]="food.img" alt="" class="img"></td>
+                    <td><p>{{food.name}}</p></td>
+                    <td><p>{{food.price}}</p></td>
+                    <td>
+                        <button class="btn btn-danger"><i class='bx bx-trash' (click)="delete(form2,food._id)"></i></button>
+                    </td>
+                    <td>
+                      <a [routerLink]="['/edit-food', food._id]" class="btn btn-secondary">Edit</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>

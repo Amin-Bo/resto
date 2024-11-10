@@ -1,0 +1,76 @@
+<div class="container">
+    <img class="wave" src="../assets/img/wave2.png">
+
+    <div class="register">
+
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="">
+        </div>
+        <div class="form">
+            <h1>Restaurant Register</h1>
+            <form #f="ngForm">
+
+
+                <div class="form-floating mb-3">
+                    <label for="floatingInput" >Name</label>
+                    <input type="text" class="form-control" placeholder="name" name="name" [(ngModel)]="form.name" required>
+                    
+                </div>
+
+                <div class="form-floating mb-3">
+                    <label for="floatingInput">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="form.email"required>
+                    
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Passowrd</label>
+                    <input type="password" class="form-control" id="" placeholder="password" name="password"
+                        [(ngModel)]="form.password" required>
+                   
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Phone </label>
+                    <input type="text" class="form-control" id="" placeholder="name@example.com" name="phone"
+                        [(ngModel)]="form.phone" required>
+                   
+                </div>
+
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Postion</label>
+                    <input type="text" class="form-control" id="" placeholder="Postion" name="positon"
+                        [(ngModel)]="form.position"required>
+                    
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Logo</label>
+                    <input type="text" class="form-control" id="" placeholder="Logo" name="logo"
+                        [(ngModel)]="form.logo"required>
+                    
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Cover</label>
+                    <input type="text" class="form-control" id="" placeholder="Logo" name="cover"
+                        [(ngModel)]="form.cover"required>
+                    
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword" >Description</label> 
+                    <textarea type="text" class="form-control" id="" placeholder="Logo" name="description"
+                        [(ngModel)]="form.description" required></textarea>
+                   
+                </div>
+                <a routerLink="/RestaurentLogin">You have an account?</a>
+
+                <button type="submit" class="btn" (click)="register(form)">
+                    Register
+                </button>
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+    <img class="wave" src="../assets/img/wave2.png">
+
+    <div class="register">
+
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="">
+        </div>
+        <div class="form">
+            <img src="../assets/img/avatar.png">
+
+            <form #f="ngForm">
+                <div class="form-floating mb-3">
+                    <label for="floatingInput">last Name</label>
+                    <input type="username" class="form-control" id="floatingInput" placeholder="last name" name="lastName" [(ngModel)]="form.lastName" required>
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingInput">First Name</label>
+                    <input type="username" class="form-control" id="floatingInput" placeholder="first name" name="firstName" [(ngModel)]="form.firstName" required>
+
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">number phone </label>
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="phone number " name="phone" [(ngModel)]="form.phone" required>
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="floatingPassword">Email </label>
+                    <input type="email" class="form-control" id="floatingPassword" placeholder="name@example.com" name="email" [(ngModel)]="form.email" required>
+                </div>
+
+                <div class="form-floating">
+                    <label for="floatingPassword">Password</label>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="form.password" required>
+                </div>
+
+                <a routerLink="/login">You have an account?</a>
+                <a routerLink="/login">
+                    <button type="submit" class="btn" (click)="register(form)" [disabled]="!f.valid">
+                Register
+            </button>
+                </a>
+            </form>
+        </div>
+
+
+    </div>
+</div>

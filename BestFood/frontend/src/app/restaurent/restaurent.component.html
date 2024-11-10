@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+    <div class="cen">
+        <br>
+        <h1 style="text-align:center">{{this.p1}}<span style="color:rgb(255, 94, 0);">{{this.p2}}</span></h1><br>
+
+        <div class="row ">
+            <div class="col-md-4" *ngFor="let resto of restos" style="margin-bottom: 10px;">
+                <!-- <div class="row">
+                    <div class="col">
+                        <div class="cen">
+                            <img [src]="resto.logo" alt="" srcset="" class="img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="cen">
+                        <h5>{{resto.name}}Restaurent</h5><br>
+                        <h6> {{resto.email}} </h6>
+                        <h6> {{resto.position}} </h6>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-buy2" routerLink="/RestaurantMenu/{{resto.email}}"><i class='bx bx-food-menu '></i>Menu </button>
+                    </div>
+                </div> -->
+                <div class="card" style="width: 15rem; height:auto;">
+                    <img [src]="resto.logo" class='card-img-top'
+                    style="width:'auto';height:'100px';margin:auto;margin-top: 10px;">
+                    <div class='card-body 1-light text-dark b' style='text-align:center;font-weight:bold'>
+                        <h6 class='card-title' style='color:black;text-align:center'>{{resto.name}}Restaurent</h6>
+                        <p class='card-text' style='color:rgb(153, 153, 153);'>{{resto.email}}</p>
+                        <p class="card-text" style='color:rgb(0, 0, 0);'>{{resto.position}}</p>
+                        <div class='card-body '>
+                            <button class="btn btn-buy2" routerLink="/RestaurantMenu/{{resto.email}}"><i class='bx bx-food-menu '></i>Menu </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>

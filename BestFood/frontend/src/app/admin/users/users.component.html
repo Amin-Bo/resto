@@ -1,0 +1,47 @@
+<app-side-bar-admin></app-side-bar-admin>
+<div class="container">
+    <div class="bloc">
+        <p class="p">Use<span style="color: rgb(247, 97, 10);">rs</span></p>
+
+        <button type="submit" class="btn btn-success">add</button><br>
+            <div class="{{alert}}" [hidden]=!message>
+                {{message}}
+            </div>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">last name</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">phone</th>
+                    <th scope="col">email</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+                            <button type="submit" class="btn btn-warning" (click)="delete(user._id)">delete</button>
+                            <button type="submit" class="btn btn-primary"  routerLink="updateUser/{{user._id}}">update</button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>

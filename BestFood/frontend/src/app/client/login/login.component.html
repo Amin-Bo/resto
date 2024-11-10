@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="img">
+        <a href="index.php"><img src="../assets/img/logo2.png"></a>
+    </div>
+    <div class="login-content">
+        <div class="form">
+            <img src="../assets/img/avatar.svg">
+
+            <h2 class="title">Welcome</h2>
+
+            <form #f="ngForm">
+
+                <div class="{{alert}}" [hidden]=!message>
+                    {{message}}
+                </div>
+                <div class="div">
+
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput">Email</label>
+                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email" required>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingPassword">Password </label>
+
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password" required>
+                    </div>
+                </div>
+
+
+                <a routerLink="/Register">Creat user account?</a><br>
+                <a routerLink="/RestaurentLogin">You are restaurant?</a><br>
+                <button type="submit" class="btn btn-primary" (click)="login(form)" [disabled]="!f.valid">Login</button><br> <br>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+</div>

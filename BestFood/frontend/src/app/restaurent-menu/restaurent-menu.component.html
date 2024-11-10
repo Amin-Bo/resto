@@ -1,0 +1,120 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top:20px">
+
+    <div class="cover" style="background-image:url({{resto.cover}})">
+        <div class="row">
+            <div class="col center">
+
+
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-top:-100px">
+        <div class="row" style="margin:30px">
+            <div class="col-2 center">
+                <img [src]="resto.logo" alt="" class="logo">
+            </div>
+    
+        </div>
+        <div class="row center">
+            <h1>{{resto.name}}</h1>
+        </div>
+    </div>
+
+    <div class="row" style="border: 1px solid black; padding:25px;border-radius:15px;background-color:white;margin-bottom: 10px;margin:auto;" >
+        
+        <div class="col-2">
+            <h5><i class='bx bx-current-location' ></i> Location:</h5>
+            <h5><i class='bx bx-mail-send' ></i> Email:</h5>
+            <h5><i class='bx bxs-phone' ></i> Phone:</h5>
+            <h5><i class='bx bxs-folder'></i> Description:</h5>
+        </div>
+        <div class="col">
+            <h5>{{resto.position}}</h5>
+            <h5>{{resto.email}}</h5>
+            <h5>{{resto.phone}}</h5>
+            <h5>{{resto.description}}</h5>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col" style="margin-top:30px">
+            <h1>{{resto.name}}<span style="color:rgb(255, 94, 0);">MENU</span></h1><br>
+
+        </div>
+        <div class='row'>
+            <br>
+            <!-- ---------- -->
+
+            <div class='col' *ngFor="let foods of food">
+
+                <div class='card' style="width: 15rem; height:auto;">
+                    <img [src]="foods.img" class='card-img-top'
+                        style="width:'auto';height:'100px';margin:auto;margin-top: 10px;">
+                    <div class='card-body 1-light text-dark b' style='text-align:center;font-weight:bold'>
+                        <h6 class='card-title' style='color:black;text-align:center'>{{foods.name}}</h6>
+                        <p class='card-text' style='color:rgb(43, 184, 62);'>{{foods.price}} TND</p>
+                        <p class="card-text" style='color:rgb(43, 184, 62);'>Available</p>
+                    </div>
+                    <div class='card-body '>
+                        <div class="row center">
+                            <button class="btn btn-s" (click)="mins(foods)"><i class='bx bx-minus-circle'></i></button>
+                            <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
+                            <input type="text" name="qte" id="" class="qte" disabled placeholder="" [(ngModel)]="foods.quantity">
+
+                            <button class="btn btn-s" (click)="plus(foods)"><i class='bx bx-plus-circle'></i></button>
+
+                        </div>
+                        <button type="button" class="btn btn btn-buy" style="margin-top:10px" (click)="buy(foods,foods._id)">
+                            <i class='bx bxs-cart-add'></i>BUY NOW
+                        </button>
+                    </div>
+                </div>
+
+                <br>
+                <!-- Modal -->
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{foods.name}}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                   <div class="col-md-4" style="background-color: rgb(223, 223, 223); border-radius:15px ">
+                                    <img [src]="foods.img" alt="" class="img">
+                                   </div>
+                                   <div class="col-md-8" >
+                                       <h6>Description</h6>
+                                       <p>1 The Original Wrapper Raclette et Bacon (voir détails à la carte)+ 1 accompagnement + 1 boisson</p>
+                                   </div>
+                                </div>
+    
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <button class="btn btn-s" (click)="mins()"><i class='bx bx-minus-circle'></i></button>
+                                    <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
+                                    <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="n" >
+                                    <button class="btn btn-s" (click)="plus()"><i class='bx bx-plus-circle'></i></button>
+                                    
+                                </div>
+                                <button type="button" class="btn btn-buy4" (click)="buy(foods._id)">BUY NOW<i
+                                    class='bx bx-plus-circle'></i></button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal" style="width:100%">Close</button>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>/* -->
+            </div>
+            <br>
+
+        </div>
+
+    </div>
+
+</div>

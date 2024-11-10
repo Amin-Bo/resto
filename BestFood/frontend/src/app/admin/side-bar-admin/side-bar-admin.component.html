@@ -1,0 +1,78 @@
+<div [ngClass]="{'sidebar':true,'active':check}" style="z-index: 1000;">
+    <div class="log_content">
+        <div class="logo">
+            <img src="../assets/img/logo.png" width="60" height="60" class="d-inline-block align-top" srcset="">
+            <!-- <div class="logo_name">Best Food</div> -->
+        </div>
+        <i class='bx bx-menu-alt-left' id="btn" (click)="toggle()"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a routerLink="/admin/profil">
+
+                <i class='bx bx-user' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Profil</span>
+            </a>
+            <span class="tool">Profil</span>
+        </li>
+        <!-- <li>
+          <a routerLink="/dashbored">
+              <i class='bx bx-grid-alt' style="color: rgb(0, 0, 0);"></i>
+              <span class="links_name">Dashbored</span>
+          </a>
+          <span class="tool">Dashbored</span>
+      </li> -->
+
+
+        <li>
+            <a routerLink="/admin/users">
+                <i class='bx bx-server' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Users</span>
+            </a>
+            <span class="tool">update</span>
+        </li>
+
+
+        <li>
+            <a routerLink="/admin/resto">
+                <i class='bx bx-food-menu' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Restaurents</span>
+            </a>
+            <span class="tool">Menu</span>
+        </li>
+        <li>
+            <a routerLink="/admin/contacts">
+                <i class='bx bx-restaurant' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Contacts</span>
+            </a>
+            <span class="tool">Restaurent</span>
+        </li>
+        <li>
+            <a routerLink="/admin/homme">
+                <i class='bx bxs-chat' style="color: rgb(0, 0, 0);"></i>
+
+                <span class="links_name">Homme</span>
+            </a>
+            <span class="tool">Contact</span>
+        </li>
+
+
+
+
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <div class="name_job">
+                    <div class="name">{{user.user.lastName}} {{user.user.firstName}}</div>
+                    <div class="job">{{user.user.Role}}</div>
+                </div>
+            </div>
+            <a (click)="logout()"><i class='bx bxs-log-out' id="log_out" ></i></a>
+        </div>
+    </div>
+</div>
+<div>
+
+    <router-outlet></router-outlet>
+</div>

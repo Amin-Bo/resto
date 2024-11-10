@@ -1,0 +1,41 @@
+
+<div class="row center">
+
+    <div class='row'>
+        <br>
+        <!-- ---------- -->
+
+        <div class='col' *ngFor="let food of foodDiet">
+
+            <div class='card' style="width: 15rem; height:auto;">
+                <img [src]="food.img" class='card-img-top'
+                    style="width:'auto';height:'100px';margin:auto;margin-top: 10px;">
+                <div class='card-body 1-light text-dark b' style='text-align:center;font-weight:bold'>
+                    <h6 class='card-title' style='color:black;text-align:center'>{{food.name}}</h6>
+                    <p class='card-text' style='color:rgb(43, 184, 62);'>{{food.price}} TND</p>
+                    <p class="card-text" style='color:rgb(43, 184, 62);'>Available</p>
+                </div>
+                <div class='card-body '>
+                    <div class="row center">
+                        <button class="btn btn-s" (click)="mins(food)"><i class='bx bx-minus-circle'></i></button>
+                        <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
+                        <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="food.quantity" >
+                        
+                        <button class="btn btn-s" (click)="plus(food)"><i class='bx bx-plus-circle'></i></button>
+                        
+                    </div>
+                    <button type="button" class="btn btn btn-buy" 
+                       style="margin-top:10px" (click)="buy(food,food._id)">
+                        <i class='bx bxs-cart-add'></i>BUY NOW
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+        </div>
+        <br>
+
+    </div>
+
+</div>

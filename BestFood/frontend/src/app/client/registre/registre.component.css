@@ -1,0 +1,199 @@
+    .wave {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .register {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        margin-left: 10%;
+    }
+    
+    .register img {
+        width: 150px;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .form {
+        width: 300px;
+        margin-left: 10%;
+        margin-right: -20%;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #F97909, #F97909, #F97909);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: .5s;
+    }
+    
+    .btn:hover {
+        background-position: right;
+    }
+    
+    a {
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        color: #999;
+        font-size: 0.9rem;
+        transition: .3s;
+    }
+    
+    a:hover {
+        color: #F97909;
+    }
+    
+    @media screen and (min-width: 2560px) {
+        .wave {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 80%;
+            z-index: -1;
+        }
+        .register {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            margin-left: -10%;
+            margin-right: -20%;
+        }
+        .logo img {
+            width: 900px;
+            height: 900px;
+        }
+        .form {
+            width: 1300px;
+            margin-left: 10%;
+            margin-right: -20%;
+        }
+    }
+    
+    @media screen and (min-width: 1440px) {
+        .form {
+            width: 600px;
+            margin-left: 10%;
+            margin-right: -20%;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .wave {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 80%;
+            z-index: -1;
+        }
+        .logo img {
+            width: 400px;
+            height: 400px;
+        }
+    }
+    
+    @media screen and (max-width: 945px) {
+        .wave {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 0%;
+            z-index: -1;
+        }
+        .logo img {
+            width: 300px;
+            height: 300px;
+        }
+        .register {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .logo img {
+            width: 300px;
+            height: 300px;
+        }
+        .register {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            margin-left: -15%;
+        }
+    }
+    
+    @media screen and (max-width: 647px) {
+        .logo img {
+            width: 200px;
+            height: 200px;
+        }
+        .register {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            margin-left: -5%;
+        }
+    }
+    
+    @media screen and (max-width: 575px) {
+        .logo img {
+            width: 0px;
+            height: 0px;
+        }
+        .register {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            margin-left: 10%;
+        }
+    }
+    
+    @media screen and (max-width: 395px) {
+        .form {
+            width: 290px;
+            margin-left: 0%;
+            margin-right: -20%;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .form {
+            width: 260px;
+            margin-left: 0%;
+            margin-right: -20%;
+        }
+    }

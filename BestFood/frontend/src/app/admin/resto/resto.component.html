@@ -1,0 +1,48 @@
+<app-side-bar-admin></app-side-bar-admin>
+<div class="container">
+    <div class="bloc">
+        <p class="p">Restouran<span style="color: rgb(247, 97, 10);">ts</span></p>
+        <br>
+        <div class="{{alert}}" [hidden]=!message>
+            {{message}}
+        </div>
+        <table class="table">
+            <thead>
+                <button type="submit" class="btn btn-success">add</button>
+
+                <tr>
+
+                    <th scope="col">logo</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let resto of restos;">
+
+                    <td><img [src]="resto.logo" alt="" srcset=""class="img"></td>
+                    <td>{{resto.name}}</td>
+                    <td>{{resto.phone}}</td>
+                    <td>{{resto.phone}}</td>
+                    <td>{{resto.position}}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+                            <button type="submit" class="btn btn-warning" (click)="delete(resto._id)">delete</button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>

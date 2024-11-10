@@ -1,0 +1,26 @@
+.nav {
+    background-color: rgb(255, 94, 0);
+    font-family: "Varela Round", sans-serif;
+  }
+  .sh {
+    box-shadow: 1px 1px 12px #555;
+  }
+  .nav2 {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  
+  #navc {
+    color: white;
+  }
+  #navc a:hover {
+    color: black;
+  }
+  .dark-mode {
+    background-color: rgb(26, 26, 26);
+    color: white;
+  }
+  li {
+    padding-left: 20px;
+  }
+  

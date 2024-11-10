@@ -1,0 +1,83 @@
+const express = require("express");
+const router = express.Router();
+const jwt = require("jsonwebtoken");
+const Restaurant = require("../Models/Restaurant");
+const Food = require("../Models/Food");
+const passport = require("passport");
+const bcrypt = require("bcryptjs");
+const ONE_WEEK = 604800; //Token validtity in seconds
+
+router.get("/food",  passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    console.log(req.user);
+    res.json({ success: true, message: "profile ", restaurant: req.user });
+  }
+);
+router.post("/food", (req, res, next) => {
+  const { name, price, img, category } = req.body;
+  newFood = new Food();
+  newFood.name = req.body.name;
+  newFood.price = req.body.price;
+  newFood.img = req.body.img;
+  newFood.category = req.body.category;
+  //console.log(newFood);
+  //let token = req.headers.authorization; //token
+
+  let token = req.body.token; //token
+  jwt.verify(token, process.env.SECRET, (err, decoded) => {
+    Restaurant.findOne({ _id: decoded.restaurant._id }, (err, restaurant) => {
+      if (err) {
+        res.send({ message: "restaurant not found" });
+      } else {
+        newFood.restaurant = restaurant;
+        console.log(newFood);
+        newFood.restaurant = restaurant;
+        newFood.save();
+        restaurant.foods.push(newFood);
+        restaurant.save();
+        res.send({ message: "Food saved successfully" });
+      }
+    });
+  });
+});
+router.get("/foods", (req, res) => {
+  Food.find({}).then((food) => {
+    if (!food) {
+      return res.status(404).json({
+        msg: "foods not found !",
+        success: false,
+      });
+    }
+    console.log(food)
+    res.status(200).json({
+      success: true,
+      food,
+      msg: "all foods !",
+    });
+  });
+});
+// implement get food by id
+router.get("/food/:id", (req, res) => {
+  Food.findById(req.params.id).then((food) => {
+    if (!food) {
+      return res.status(404).json({
+        msg: "food not found !",
+        success: false,
+      });
+    }
+    res.status(200).json(
+      food
+    );
+  });
+});
+// update food 
+router.put("/food/:id", (req, res) => {
+  Food.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, food) => {
+    if (err) {
+      return res.status(500).json({ message: "no food found" });
+    }
+    res.json({ message: "food updated", food });
+  });
+}
+);
+module.exports = router;
